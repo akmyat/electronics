@@ -40,8 +40,8 @@ float readHumidity(){
 }
 
 /* WiFi */
-const char* ssid = "ST7-14";
-const char* password = "MayThazin11";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 WiFiClient client;
 
 void connectToWiFi(){
@@ -59,7 +59,7 @@ void connectToWiFi(){
 unsigned long myChannelNumber = 1;
 unsigned long temperatureFieldNumber = 1;
 unsigned long humidityFieldNumber = 2;
-const char* myWriteAPIKey = "5VIUK1UP923R8NG6";
+const char* myWriteAPIKey = "TOKEN";
 
 void writeToThingSpeak(unsigned long fieldNumber, float value){
     int response = ThingSpeak.writeField(myChannelNumber, fieldNumber, value, myWriteAPIKey);
